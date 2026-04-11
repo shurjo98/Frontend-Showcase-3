@@ -1,0 +1,16 @@
+export type MessageRole = "user" | "assistant";
+
+export type Message = {
+  id: string;
+  role: MessageRole;
+  content: string;
+  timestamp: string;
+  liked?: boolean | null;
+};
+
+export type Conversation = {
+  id: string;
+  title: string;
+  messages: Message[];
+  updatedAt: string;
+};

@@ -206,7 +206,7 @@ function ChatInput({ onSendMessage }: Props) {
           </div>
         </div>
 
-        <p className="mt-3 text-center text-xs text-slate-400">
+        <p className="mt-6 text-center text-xs text-slate-400">
           Intelligent Assistant can make mistakes. Check important info.
         </p>
       </div>

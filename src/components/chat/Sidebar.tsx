@@ -1,4 +1,4 @@
-import { MessageSquarePlus, Search, Sparkles, PanelLeftClose } from "lucide-react";
+import { MessageSquarePlus, Search, Sparkles, PanelLeftClose, Settings } from "lucide-react";
 import type { Conversation } from "../../types/chat";
 
 type Props = {
@@ -73,16 +73,14 @@ function Sidebar({
                   onSelectConversation(conversation.id);
                   onCloseMobile?.();
                 }}
-                className={`w-full rounded-2xl px-3 py-3 text-left transition ${
-                  isActive
+                className={`w-full rounded-2xl px-3 py-3 text-left transition ${isActive
                     ? "border border-slate-200 bg-white shadow-sm"
                     : "text-slate-600 hover:bg-white/80 hover:shadow-sm"
-                }`}
+                  }`}
               >
                 <p
-                  className={`truncate text-sm ${
-                    isActive ? "font-semibold text-slate-900" : "text-slate-700"
-                  }`}
+                  className={`truncate text-sm ${isActive ? "font-semibold text-slate-900" : "text-slate-700"
+                    }`}
                 >
                   {conversation.title}
                 </p>
@@ -93,13 +91,19 @@ function Sidebar({
         </div>
       </div>
 
-      <div className="border-t border-slate-200/80 p-4">
-        <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
-          <p className="text-sm font-medium text-slate-800">Upgrade plan</p>
-          <p className="mt-1 text-xs leading-5 text-slate-400">
-            More access to premium AI features
-          </p>
-        </div>
+      <button
+        className="flex w-full items-center gap-2 rounded-2xl px-3 py-2 text-sm text-slate-600 transition hover:bg-white hover:shadow-sm"
+      >
+        <Settings size={16} />
+        Settings
+      </button>
+
+      {/* Upgrade card */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+        <p className="text-sm font-medium text-slate-800">Upgrade plan</p>
+        <p className="mt-1 text-xs leading-5 text-slate-400">
+          More access to premium AI features
+        </p>
       </div>
     </aside>
   );

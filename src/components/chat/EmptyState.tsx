@@ -6,7 +6,15 @@ type Props = {
 
 function EmptyState({ onSelectPrompt }: Props) {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center px-4 pb-12 text-center">
+    <div className="flex flex-1 flex-col items-center justify-start px-4 pt-10 pb-12 text-center sm:justify-center">
+      <div className="mb-4 sm:hidden">
+        <img
+          src="logo.png"
+          alt="Logo"
+          className="h-14 w-14 animate-float-logo object-contain"
+        />
+      </div>
+
       <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
         What can I help with?
       </h1>
